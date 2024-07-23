@@ -16,3 +16,7 @@ An up-to-date environment for building against popular DCC applications. The Pyt
 ### Build
 
     docker build --rm -t ababak/boost .
+
+### Pull
+
+    docker pull ababak/boost
