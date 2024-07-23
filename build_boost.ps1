@@ -1,14 +1,10 @@
-#
-# Put this script to C:\build
-#
+# Build the following Boost versions with Python:
 $python_boost = [ordered]@{
     "3.9" = "1_76_0";
     "3.10" = "1_80_0";
     "3.11" = "1_82_0";
     "3.12" = "1_85_0";
 }
-
-Write-Host "Current dir: $(pwd)"
 
 foreach ($pb in $python_boost.getEnumerator()) {
     $BOOST_VER = $pb.Value
