@@ -4,7 +4,6 @@
 #
 # Build the docker image:
 # docker build --rm -t ababak/boost .
-# docker run --rm -it ababak/boost powershell
 # See README.md for details
 
 # Chocolatey now requires .NET Framework 4.8
@@ -76,5 +75,6 @@ RUN Invoke-WebRequest "https://archives.boost.io/release/1.85.0/source/boost_1_8
     7z x boost_1_85_0.7z; \
     Remove-Item boost_1_85_0.7z
 
-WORKDIR /build
-ENTRYPOINT [ "C:/BuildTools/Common7/Tools/VsDevCmd.bat", "-arch=amd64", "&&" ]
+COPY build_boost.ps1 /
+
+RUN ./build_boost
