@@ -78,9 +78,8 @@ using python
             variant=release `
             threading=multi `
             link=static `
-            runtime-link=static `
             install
     & deactivate
     Pop-Location
-    Remove-Item $boost_source
+    Remove-Item $boost_source -Force -Recurse
 }
