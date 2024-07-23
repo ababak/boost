@@ -1,7 +1,7 @@
 #
 # Put this script to C:\build
 #
-$python_boost = @{
+$python_boost = [ordered]@{
     "3.9" = "1_76_0";
     "3.10" = "1_80_0";
     "3.11" = "1_82_0";
@@ -10,7 +10,7 @@ $python_boost = @{
 
 Write-Host "Current dir: $(pwd)"
 
-foreach ($pb in $python_boost.getEnumerator() | Sort-Object) {
+foreach ($pb in $python_boost.getEnumerator()) {
     $BOOST_VER = $pb.Value
     Write-Host "Boost: $BOOST_VER"
     
