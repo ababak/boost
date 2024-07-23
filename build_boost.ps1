@@ -55,7 +55,6 @@ using python
         --with-locale `
         --with-log `
         --with-math `
-        # --with-mpi `
         --with-nowide `
         --with-program_options `
         --with-python `
