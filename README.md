@@ -2,7 +2,7 @@
 ltsc2019-based Docker image with Python and Boost
 
 ### Features
-An up-to-date environment for building against popular DCC applications. The Python/Boost are matched as described at https://vfxplatform.com
+An up-to-date environment for building against popular DCC applications. The Python/Boost versions are matched as described at https://vfxplatform.com
 
 - Python 3.9, Boost 1.76.0 on Windows (Maya 2023, Houdini 19.5, Nuke 14.0)
 - Python 3.10, Boost 1.80.0 on Windows (Maya 2024, Houdini 20.0, Nuke 15.0)
