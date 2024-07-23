@@ -1,12 +1,15 @@
 # boost
 ltsc2019-based Docker image with Python and Boost
 
-### Supports
-- Python 3.9, Boost 1.76.0 on Windows
-- Python 3.10, Boost 1.80.0 on Windows
-- Python 3.11, Boost 1.82.0 on Windows
-- Python 3.12, Boost 1.85.0 on Windows
+### Features
+An up-to-date environment for building against popular DCC applications. The Python/Boost are matched as described at https://vfxplatform.com
 
-## Build
+- Python 3.9, Boost 1.76.0 on Windows (Maya 2023, Houdini 19.5, Nuke 14.0)
+- Python 3.10, Boost 1.80.0 on Windows (Maya 2024, Houdini 20.0, Nuke 15.0)
+- Python 3.11, Boost 1.82.0 on Windows (Maya 2025, Houdini 20.5)
+- Python 3.12, Boost 1.85.0 on Windows (future releases)
+
+
+### Build
 
     docker build --rm -t ababak/boost .
