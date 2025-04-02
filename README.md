@@ -10,6 +10,7 @@ An up-to-date environment for building against popular DCC applications. The Pyt
 - Python 3.9, Boost 1.76.0 on Windows (Maya 2023, Houdini 19.5, Nuke 14.0)
 - Python 3.10, Boost 1.80.0 on Windows (Maya 2024, Houdini 20.0, Nuke 15.0)
 - Python 3.11, Boost 1.82.0 on Windows (Maya 2025, Houdini 20.5)
+- Python 3.11, Boost 1.85.0 on Windows (Maya 2026)
 - Python 3.12, Boost 1.85.0 on Windows (future releases)
 
 
