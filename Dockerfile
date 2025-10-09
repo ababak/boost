@@ -52,6 +52,8 @@ RUN choco install -y \
     python311
 RUN choco install -y \
     python312
+RUN choco install -y \
+    python313
 
 ENV PYTHONIOENCODING UTF-8
 
@@ -74,6 +76,9 @@ RUN Invoke-WebRequest "https://archives.boost.io/release/1.82.0/source/boost_1_8
 RUN Invoke-WebRequest "https://archives.boost.io/release/1.85.0/source/boost_1_85_0.7z" -OutFile boost_1_85_0.7z; \
     7z x boost_1_85_0.7z; \
     Remove-Item boost_1_85_0.7z
+RUN Invoke-WebRequest "https://archives.boost.io/release/1.88.0/source/boost_1_88_0.7z" -OutFile boost_1_88_0.7z; \
+    7z x boost_1_88_0.7z; \
+    Remove-Item boost_1_88_0.7z
 
 COPY build_boost.ps1 /
 
