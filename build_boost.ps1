@@ -4,6 +4,7 @@ $boost_python = [ordered]@{
     "1_80_0" = @("3.10");
     "1_82_0" = @("3.11");
     "1_85_0" = @("3.11", "3.12");
+    "1_88_0" = @("3.13");
 }
 
 foreach ($bp in $boost_python.getEnumerator()) {
