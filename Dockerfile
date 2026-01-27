@@ -24,7 +24,7 @@ RUN Invoke-WebRequest "https://aka.ms/vs/16/release/vs_buildtools.exe" -OutFile 
     --add Microsoft.VisualStudio.Workload.MSBuildTools \
     --add Microsoft.VisualStudio.Workload.VCTools \ 
     --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 \ 
-    --add Microsoft.VisualStudio.Component.Windows10SDK.18362 \ 
+    --add Microsoft.VisualStudio.Component.Windows10SDK.19041 \ 
     --add Microsoft.VisualStudio.Component.VC.CMake.Project \ 
     --add Microsoft.VisualStudio.Component.TestTools.BuildTools \ 
     --add Microsoft.VisualStudio.Component.VC.ASAN \ 
