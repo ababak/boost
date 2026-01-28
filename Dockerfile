@@ -6,7 +6,6 @@
 # docker build --rm -t ababak/boost .
 # See README.md for details
 
-# Chocolatey now requires .NET Framework 4.8
 FROM mcr.microsoft.com/dotnet/framework/runtime:4.8-windowsservercore-ltsc2022 as base
 
 LABEL maintainer="ababak@gmail.com"
