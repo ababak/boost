@@ -63,6 +63,8 @@ RUN setx /M PATH $( \
     $env:PROGRAMFILES + '/NASM' \
     )
 
+FROM base as build
+
 RUN Invoke-WebRequest "https://archives.boost.io/release/1.76.0/source/boost_1_76_0.7z" -OutFile boost_1_76_0.7z; \
     7z x boost_1_76_0.7z; \
     Remove-Item boost_1_76_0.7z
@@ -82,3 +84,6 @@ RUN Invoke-WebRequest "https://archives.boost.io/release/1.88.0/source/boost_1_8
 COPY build_boost.ps1 /
 
 RUN ./build_boost
+
+FROM base
+COPY --from=build C:/local C:/local
