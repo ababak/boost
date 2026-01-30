@@ -6,7 +6,7 @@
 # docker build --rm -t ababak/boost .
 # See README.md for details
 
-FROM mcr.microsoft.com/dotnet/framework/runtime:4.8-windowsservercore-ltsc2022 as base
+FROM mcr.microsoft.com/dotnet/framework/runtime:4.8-windowsservercore-ltsc2022 AS base
 
 LABEL maintainer="ababak@gmail.com"
 
@@ -54,16 +54,15 @@ RUN choco install -y \
 RUN choco install -y \
     python313
 
-ENV PYTHONIOENCODING UTF-8
-
-ENV CMAKE_GENERATOR "NMake Makefiles"
+ENV PYTHONIOENCODING="UTF-8"
+ENV CMAKE_GENERATOR="NMake Makefiles"
 RUN setx /M PATH $( \
     'c:/cmake' + ';' + \
     $env:PATH + ';' + \
     $env:PROGRAMFILES + '/NASM' \
     )
 
-FROM base as build
+FROM base AS build
 
 RUN Invoke-WebRequest "https://archives.boost.io/release/1.76.0/source/boost_1_76_0.7z" -OutFile boost_1_76_0.7z; \
     7z x boost_1_76_0.7z; \
